@@ -1,0 +1,362 @@
+:root {
+    --pink: hsl(322, 100%, 66%);
+    --light-pink: hsl(321, 100%, 78%);
+    --light-red: hsl(0, 100%, 63%);
+    --very-dark-cyan: hsl(192, 100%, 9%);
+    --very-pale-blue: #f5faff;
+    --poppins-font: "poppins";
+    --open-sans-font: "open-sans";
+    --fw-bold: 700;
+    --fw-semi-bold: 600;
+    --fw-regular: 400;
+    --fz-big: 4rem;
+    --fz-semi-big: 2rem;
+    --fz-regular: 0.8rem;
+}
+
+@font-face {
+    font-family: poppins;
+    font-weight: var(--fw-bold);
+    src: url(../fonts/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: open-sans;
+    font-weight: var(--fw-semi-bold);
+    src: url(../fonts/OpenSans_Condensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: open-sans;
+    font-weight: var(--fw-regular);
+    src: url(../fonts/OpenSans_Condensed-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header nav a,
+footer,
+main section p,
+main section a {
+    font-weight: var(--fw-regular);
+    font-family: var(--open-sans-font);
+}
+
+.hero_section a:hover,
+button:hover {
+    background-color: var(--light-pink);
+}
+
+header {
+    width: 100%;
+    padding: 3rem 0;
+}
+
+.flex,
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section h2 {
+    font-weight: var(--fw-bold);
+}
+
+nav a {
+    padding: 0.5rem 1rem;
+    width: 10%;
+    text-align: center;
+    border-radius: 1.5rem;
+    text-transform: capitalize;
+    box-shadow: 0 0 0.2rem var(--light-pink);
+    color: var(--pink);
+    border: 1px solid var(--pink);
+}
+
+nav a:hover {
+    color: var(--light-pink);
+    border: 1px solid var(--light-pink);
+}
+
+section :where(h1, h2, p) {
+    color: var(--very-dark-cyan);
+}
+
+.hero_section {
+    padding: 5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1,
+h2 {
+    font-family: var(--poppins-font);
+}
+
+h1,
+.hero_section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+section {
+    margin: 3rem 0;
+}
+
+section.hero_section p {
+    width: 30%;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.hero_section a {
+    color: var(--very-pale-blue);
+    background: var(--pink);
+    border-radius: 2.5rem;
+    font-weight: var(--fw-semi-bold);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    width: 30%;
+    box-shadow: 4px 5px 10px var(--light-pink);
+    letter-spacing: 1.2px;
+}
+
+section.mockup_section {
+    padding: 4rem 0;
+}
+
+section.mockup_section .customers_number {
+    margin-top: 3rem;
+}
+
+.customers_number h2 {
+    font-size: 3rem;
+}
+
+.customers_number p {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+section {
+    overflow: hidden;
+}
+
+section.grow_section::before {
+    content: url(../images/bg-section-top-desktop-1.svg);
+    display: block;
+    width: 100%;
+    margin-bottom: -4px;
+}
+
+section.grow_section::after {
+    content: url(../images/bg-section-bottom-desktop-1.svg);
+    display: block;
+    width: 100%;
+    margin-top: -1px;
+}
+
+.bg_section {
+    background-color: var(--very-pale-blue);
+}
+
+.image_section {
+    width: 40%;
+}
+
+.mockup_image {
+    width: 100%;
+}
+
+.image_section img,
+.mockup_image img,
+.footer_logo img,
+.logo img,
+.customers_number img {
+    width: 100%;
+    height: 100%;
+}
+
+.section_content {
+    flex-direction: row-reverse;
+}
+
+.description {
+    width: 33%;
+}
+
+.description h2 {
+    margin-bottom: 2rem;
+}
+
+section.your_users::before {
+    content: url(../images/bg-section-top-desktop-2.svg);
+    display: block;
+    width: 100%;
+    margin-bottom: -4px;
+}
+
+section.your_users::after {
+    content: url(../images/bg-section-bottom-desktop-2.svg);
+    display: block;
+    width: 100%;
+}
+
+.hero_section h2 {
+    font-size: 2rem;
+}
+
+footer {
+    margin-top: auto;
+}
+
+footer .footer_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact {
+    width: 24%;
+}
+
+footer :where(ul li a, .contact p, .news_letter, form button) {
+    color: var(--very-pale-blue);
+}
+
+footer .bg_top_footer {
+    background-image: url(../images/bg-footer-top-desktop.svg);
+    height: 9.875rem;
+    width: 100%;
+    margin-bottom: -4px;
+}
+
+.bg_footer {
+    padding: 4rem 0 2rem;
+    background-color: var(--very-dark-cyan);
+}
+
+.social_media {
+    margin-top: 4rem;
+}
+
+.social_media ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8%;
+}
+
+.social_media ul li a {
+    font-size: 2rem;
+}
+
+.news_letter p {
+    padding: 2rem 0 1rem;
+}
+
+p.contact_info {
+    padding: 1rem 0;
+}
+
+.contact_formal div {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.contact_formal p {
+    margin-left: 1rem;
+}
+
+.news_letter {
+    width: 45%;
+}
+
+.news_letter p {
+    width: 55%;
+}
+
+footer h3 {
+    text-transform: uppercase;
+}
+
+footer form {
+    margin-top: 1.7rem;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer form :where(input, button) {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+}
+
+form .email {
+    display: flex;
+    flex-direction: column;
+    width: 63%;
+}
+
+footer form input {
+    padding: 0.5rem;
+    border: 2px solid var(--very-pale-blue);
+    outline: none;
+    color: var(--very-dark-cyan);
+    width: 100%;
+}
+
+form input:invalid {
+    border: 2px solid var(--light-red);
+}
+
+.error {
+    visibility: hidden;
+    opacity: 0;
+    font-size: 0.8rem;
+    color: var(--light-red);
+    transition: all 0.3s ease;
+}
+
+form input:invalid~.error {
+    opacity: 1;
+    visibility: visible;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid var(--pink);
+    background-color: var(--pink);
+    padding: 0.5rem;
+    width: 30%;
+    font-weight: var(--fw-semi-bold);
+}
