@@ -306,13 +306,11 @@ footer h3 {
     text-transform: uppercase;
 }
 
-footer form {
-    margin-top: 1.7rem;
-}
-
 form {
     display: flex;
+    align-items: start;
     justify-content: space-between;
+    margin-top: 1.7rem;
 }
 
 footer form :where(input, button) {
