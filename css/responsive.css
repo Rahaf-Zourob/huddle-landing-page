@@ -101,22 +101,12 @@ button {
         width: 18%;
     }
 
-    section.grow_section::before {
-        content: url(../images/bg-section-top-mobile-1.svg);
+    .bg_desktop {
+        display: none;
     }
 
-    section.grow_section::after {
-        content: url(../images/bg-section-bottom-mobile-1.svg);
-    }
-
-    section.your_users::before {
-        content: url(../images/bg-section-top-mobile-2.svg);
-        margin-bottom: -5px;
-    }
-
-    section.your_users::after {
-        content: url(../images/bg-section-bottom-mobile-2.svg);
-        margin-top: -1px;
+    .bg_mobile {
+        display: block;
     }
 
     .bg_section,
@@ -139,11 +129,6 @@ button {
         margin-top: 4rem;
     }
 
-    footer .bg_top_footer {
-        background-image: url(../images/bg-footer-top-mobile.svg);
-        height: 3.315rem;
-    }
-
     .footer_container {
         flex-direction: column-reverse;
     }
@@ -162,6 +147,7 @@ button {
     }
 
     .bg_footer {
+        margin-top: 0;
         padding-top: 2rem;
     }
 
